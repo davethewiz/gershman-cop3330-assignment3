@@ -1,0 +1,12 @@
+@startuml
+
+App : ParseCSVIntoTable()
+App -> CustomUtils.Table : creates instance of...
+CustomUtils.Table : AddRow()
+CustomUtils.Table : PrintTable()
+CustomUtils.FileScanner <- App : creates instance of
+CustomUtils.FileScanner : GetNextLneCSV()
+CustomUtils.FileScanner : ResetScanner()
+
+
+@enduml

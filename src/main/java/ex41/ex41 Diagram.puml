@@ -1,0 +1,13 @@
+@startuml
+
+NameProcessor <-- App : Creates instance of
+App : main()
+NameProcessor : SortNames()
+NameProcessor : int GetLongestNameLength()
+NameProcessor : String GetDividerLine(int length)
+NameProcessor : String GetFormattedNameList()
+NameProcessor : OutputFormattedNameList()
+
+CustomUtils.FileScanner <- NameProcessor : Creates instance of
+
+@enduml

@@ -1,0 +1,15 @@
+@startuml
+class App
+class WordsProcessor
+class CustomUtils.FileScanner
+
+App : main()
+WordsProcessor : Map<String, Integer> CreateOccurencesDictionary()
+WordsProcessor : String GetRepeatedCharString(char character, int length)
+WordsProcessor : PrintOccurencesTable()
+WordsProcessor : Map<String, Integer> SortTable(Map<String, Integer> t)
+
+App --> WordsProcessor : creates instance of
+WordsProcessor -> CustomUtils.FileScanner : creates instance of
+CustomUtils.FileScanner : String[] GetAllLines()
+@enduml

@@ -1,0 +1,19 @@
+@startuml
+class App
+class Inventory
+class Product
+class CustomUtils.ScanInput
+App : main()
+
+Product : ToString()
+Product : Print()
+Product <-- Inventory : contains list of
+Inventory : Product[] productList
+Inventory : void SetProductList(JSONObject jsonObj)
+Inventory : Product FindByName(String name)
+Inventory : Product FindByNameInput()
+Inventory <- App : creates instance of
+
+CustomUtils.ScanInput : GetString()
+CustomUtils.ScanInput --> Inventory : input from console
+@enduml

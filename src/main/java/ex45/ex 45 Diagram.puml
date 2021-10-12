@@ -1,0 +1,11 @@
+@startuml
+class App
+class StringFileProcessor
+class CustomUtils.FileScanner
+
+App : main()
+App --> StringFileProcessor : Creates instance of
+StringFileProcessor -> CustomUtils.FileScanner : Creates instance of
+StringFileProcessor : ReplaceAll(String regex, String replacement)
+CustomUtils.FileScanner : String[] GetAllLines()
+@enduml

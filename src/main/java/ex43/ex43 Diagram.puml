@@ -1,0 +1,15 @@
+@startuml
+class App
+class WebsiteGenerator
+class CustomUtils.ScanInput
+
+App : main()
+App -> WebsiteGenerator : Creates instance of
+WebsiteGenerator : Generate()
+WebsiteGenerator : GetIndexFileString()
+WebsiteGenerator : CreateIndexFile()
+WebsiteGenerator : GetFormattedHTMLTag()
+CustomUtils.ScanInput -> App : Gets console input
+CustomUtils.ScanInput : GetString()
+CustomUtils.ScanInput : GetBool()
+@enduml
